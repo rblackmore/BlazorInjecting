@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-// Register Sample Service in Client Project.
-builder.Services.AddSingleton<ISampleDataService, SampleDataService>();
+// Add Common Sample Services.
+// This feels clunky, I don't like it, but maybe it's the right way to go?
+builder.Services.AddCommonServices();
 
 await builder.Build().RunAsync();

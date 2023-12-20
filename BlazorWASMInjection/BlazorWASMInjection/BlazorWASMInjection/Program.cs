@@ -1,10 +1,15 @@
 ﻿using BlazorWASMInjection.Components;
+using BlazorWASMInjection.Client.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
+
+// Add Common Sample Services.
+// This feels clunky, I don't like it, but maybe it's the right way to go?
+builder.Services.AddCommonServices();
 
 var app = builder.Build();
 
