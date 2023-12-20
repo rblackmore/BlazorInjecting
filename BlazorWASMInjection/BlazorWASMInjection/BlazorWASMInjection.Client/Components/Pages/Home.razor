@@ -1,0 +1,10 @@
+﻿@page "/"
+@using BlazorWASMInjection.Client.Services
+@inject ISampleDataService Data
+
+<h3>Home</h3>
+<p>Data: @this.Data.GetData()</p>
+
+@code {
+
+}
