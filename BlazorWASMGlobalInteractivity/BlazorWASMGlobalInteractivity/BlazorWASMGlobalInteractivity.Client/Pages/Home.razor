@@ -1,0 +1,9 @@
+﻿@page "/"
+@inject ISampleDataService sampleData
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+<p>Date: @this.sampleData.GetSampleData()</p>
+
+Welcome to your new app.
